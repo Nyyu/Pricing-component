@@ -10,6 +10,11 @@
     --DarkGrayishBlue: hsl(232, 13%, 33%);
 }
 
+/* 
+    I'm doing this without my glasses on god. 
+    I can barely read a word that i'm typing... 
+*/
+
 /* ELEMENTS */
 body {
     font-family: "Montserrat", sans-serif;
@@ -22,8 +27,6 @@ body {
     background-position: top right, bottom left;
     background-repeat: no-repeat;
 
-    min-height: calc(100vh - 80px);
-
     color: var(--DarkGrayishBlue);
 }
 
@@ -31,16 +34,17 @@ h1,
 h2,
 h3,
 p {
-    line-height: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
     list-style-type: none;
-    padding: 35px;
+    padding: 0 35px;
     margin: 0;
 }
 li {
-    padding: 20px 15px;
+    padding: 15px;
 
     border: 1px solid hsl(232, 13%, 33%, 0.2);
     border-left: 0;
@@ -49,10 +53,11 @@ li {
 
 button {
     width: 300px;
-    height: 50px;
+    height: 45px;
 
     border: none;
     border-radius: 8px;
+    padding: 0;
 
     position: relative;
     top: 25px;
@@ -63,14 +68,18 @@ button:hover {
 
 /* CLASSES */
 .container {
-    max-width: 1105px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
 }
 
 .row {
-    margin: 0;
+    margin: 0 25px;
+    padding: 0;
 
     display: grid;
+
     grid-template: auto / repeat(3, 1fr);
 
     place-items: center;
@@ -78,13 +87,21 @@ button:hover {
 
 .col {
     display: grid;
-    padding: 25px 0;
+    padding: 0 0 15px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
 }
 .col h1 {
     font-size: 4.5rem;
-    margin: 25px auto;
+    margin: auto;
 }
+.col h3 {
+    padding-top: 25px;
+}
+.col h3,
+.col ul {
+    place-self: center;
+}
+
 .col:nth-child(1) {
     border-radius: 12px 0 0 12px;
 }
@@ -94,9 +111,10 @@ button:hover {
 .col:nth-child(3) {
     border-radius: 0 12px 12px 0;
 }
+
 .col:nth-child(odd) {
-    width: 375px;
-    height: 485px;
+    width: 350px;
+    height: 425px;
 
     background: white;
 }
@@ -115,9 +133,10 @@ button:hover {
     color: var(--primary-02);
     border: 2px solid var(--primary-02);
 }
+
 .col:nth-child(even) {
-    width: 375px;
-    height: 535px;
+    width: 350px;
+    height: 475px;
 
     background: linear-gradient(145deg, var(--primary-01), var(--primary-02));
     border-radius: 12px;
@@ -143,33 +162,68 @@ button:hover {
 
 /* IDS */
 #title {
-    margin: 80px auto 100px;
     color: var(--GrayishBlue);
     font-weight: 700;
 }
 #title h1 {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
+    margin: 1.5625rem;
 }
 #title .switch {
     position: relative;
-    top: 40px;
-    margin: 80px auto;
+    top: 1rem;
     color: var(--LightGrayishBlue);
+}
+#switch {
+    cursor: pointer;
+}
+
+/* Media@ */
+
+@media (max-width: 1100px) {
+    body {
+        height: 100%;
+    }
+    footer {
+        padding: 0;
+    }
+
+    .container {
+        margin: 50px auto;
+    }
+    .row {
+        grid-template: auto / repeat(auto-fit, minmax(min(15.5rem, 100%), 1fr));
+        position: relative;
+    }
+    .col {
+        margin-top: 50px;
+    }
+
+    #title {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 800px) {
+    .container {
+        height: 100vh;
+    }
 }
 
 /* FRONTEND PRESET */
-.bottom {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
+footer {
+    position: fixed;
+    z-index: 100;
+
+    top: 40vh;
+    padding-left: 5px;
 }
 .attribution {
-    margin: 0 auto 15px;
     font-size: 11px;
     text-align: center;
+    margin: 5px;
+    writing-mode: vertical-lr;
 }
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.attribution div a {
+    color: hsl(228, 45%, 44%, 50%);
 }
