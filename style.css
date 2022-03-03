@@ -1,0 +1,175 @@
+:root {
+    /* Primary */
+    --primary-01: hsl(236, 72%, 79%);
+    --primary-02: hsl(237, 63%, 64%);
+
+    /* Neutral */
+    --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+    --LightGrayishBlue: hsl(234, 14%, 74%);
+    --GrayishBlue: hsl(233, 13%, 49%);
+    --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+/* ELEMENTS */
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+
+    background-color: var(--VeryLightGrayishBlue);
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    background-repeat: no-repeat;
+
+    min-height: calc(100vh - 80px);
+
+    color: var(--DarkGrayishBlue);
+}
+
+h1,
+h2,
+h3,
+p {
+    line-height: 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 35px;
+    margin: 0;
+}
+li {
+    padding: 20px 15px;
+
+    border: 1px solid hsl(232, 13%, 33%, 0.2);
+    border-left: 0;
+    border-right: 0;
+}
+
+button {
+    width: 300px;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+
+    position: relative;
+    top: 25px;
+}
+button:hover {
+    cursor: pointer;
+}
+
+/* CLASSES */
+.container {
+    max-width: 1105px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0;
+
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+
+    place-items: center;
+}
+
+.col {
+    display: grid;
+    padding: 25px 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+}
+.col h1 {
+    font-size: 4.5rem;
+    margin: 25px auto;
+}
+.col:nth-child(1) {
+    border-radius: 12px 0 0 12px;
+}
+.col:nth-child(2) {
+    z-index: 1;
+}
+.col:nth-child(3) {
+    border-radius: 0 12px 12px 0;
+}
+.col:nth-child(odd) {
+    width: 375px;
+    height: 485px;
+
+    background: white;
+}
+.col:nth-child(odd) button {
+    background: linear-gradient(75deg, var(--primary-01), var(--primary-02));
+    color: white;
+
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+
+    margin: 0 auto;
+}
+.col:nth-child(odd) button:hover {
+    background: transparent;
+    color: var(--primary-02);
+    border: 2px solid var(--primary-02);
+}
+.col:nth-child(even) {
+    width: 375px;
+    height: 535px;
+
+    background: linear-gradient(145deg, var(--primary-01), var(--primary-02));
+    border-radius: 12px;
+    color: white;
+}
+.col:nth-child(even) ul li {
+    border-color: rgb(255, 255, 255, 0.2);
+}
+.col:nth-child(even) button {
+    background: white;
+    color: var(--primary-02);
+
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    margin: 0 auto;
+}
+.col:nth-child(even) button:hover {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* IDS */
+#title {
+    margin: 80px auto 100px;
+    color: var(--GrayishBlue);
+    font-weight: 700;
+}
+#title h1 {
+    font-size: 2.1rem;
+}
+#title .switch {
+    position: relative;
+    top: 40px;
+    margin: 80px auto;
+    color: var(--LightGrayishBlue);
+}
+
+/* FRONTEND PRESET */
+.bottom {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+.attribution {
+    margin: 0 auto 15px;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
