@@ -14,7 +14,6 @@
 
 -   Preview: [Link](https://nyyu.github.io/Pricing-component/);
 -   FrontEnd Mentor: [Link](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC);
--
 
 ### Prints
 
