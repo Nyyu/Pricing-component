@@ -12,14 +12,14 @@
 
 ### Prints
 
--   Desktop
-    <img src="design/desktop-design-monthly.jpg">
+-   <h4>Desktop</h4>
+    <p align="center"><img src="design/desktop-design-monthly.jpg"></p>
 
--   Mobile
-    <img src="design/mobile-design-monthly.jpg">
+-   <h4>Mobile</h4>
+    <p align="center"><img src="design/mobile-design-monthly.jpg"></p>
 
--   Active state
-    <img src="design/active-states.jpg">
+-   <h4>Active state</h4>
+    <p align="center"><img src="design/active-states.jpg"></p>
 
 ### Links
 
