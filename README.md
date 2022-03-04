@@ -34,4 +34,3 @@
 
 - I just noticed.. I was creating my custom style using .row/.col and at the end of the project I added bootstrap cuz i got tired and didn't want to do da switch... I mean It works. BUT it would be better if I removed my .row/.col style and just let bootstrap handle those classes + it's way easier using bootstrap lol
 
----
