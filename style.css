@@ -1,6 +1,10 @@
 :root {
     /* Primary */
-    --gradient: linear-gradient(145deg, var(--primary-01), var(--primary-02));
+    --gradient: linear-gradient(
+        145deg,
+        var(--primary-01),
+        var(--primary-02)
+    ); /* var doesn't work properly with a few components */
     --primary-01: hsl(236, 72%, 79%);
     --primary-02: hsl(237, 63%, 64%);
 
