@@ -36,10 +36,9 @@
 
     <body>
         <main class="container" role="main">
-            <div id="title" role="main-text">
+            <div id="title" aria-label="main-text">
                 <h1>Our Pricing</h1 role="title">
                 <div
-                    aria-label="switch-button"
                     id="switch"
                     class="form-check form-switch"
                 >
@@ -48,6 +47,7 @@
                     >
                     <input
                         class="form-check-input"
+                        aria-checked
                         type="checkbox"
                         checked
                         role="switch"
@@ -58,7 +58,7 @@
                     >
                 </div>
             </div>
-            <div id="main-part" role="banner" aria-label="banner-prices">
+            <div id="main-part" aria-label="banner-prices">
                 <div class="row">
                     <div class="col">
                         <h2>Basic</h2>
@@ -104,8 +104,8 @@
                 </div>
             </div>
         </main>
-        <footer role="content-info">
-            <div class="attribution" role="challenge-info">
+        <footer aria-label="challenge-info">
+            <div class="attribution">
                 <div>
                     Challenge by
                     <a
